@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple demo</title>
+</head>
+<body>
+    <h1>You can see the result in the console and from the source code.</h1>
+    <script src="aliasFor.js"></script>
+    <script>
+    var obj = {};
+    obj.fn = function () {
+        console.log("Say hi to everybody!");
+    }
+
+    aliasFor(obj, 'fn')
+        .is("anotherName")
+        .and("secondName")
+        .are("moreName", "andMoreName", "andAsManyAsYouWant");
+    </script>
+</body>
+</html>
