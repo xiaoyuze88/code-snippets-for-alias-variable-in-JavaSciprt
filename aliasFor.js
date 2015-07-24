@@ -16,6 +16,7 @@
 
         var fn = function () {
             for (var i = 0, l = arguments.length; i < l; i++) {
+                // If the namespace is already been in used, it will not cover the old one.
                 obj[arguments[i]] === undefined && (obj[arguments[i]] = obj[oldName]);
             }
             return fn;
